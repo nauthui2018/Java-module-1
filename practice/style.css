@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    background-image: url("./images/bg-pattern-desktop.svg");
+    background-size: cover;
+    background-position: center center;
+}
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+.container_left {
+    flex: 1.5;
+    margin-left: 50px;
+}
+.container_left img {
+    margin-top: 150px;
+}
+.container_left h1 {
+    margin-top: 100px;
+    font-size: 50px;
+    transform: translateX(-100%);
+    text-transform: uppercase;
+    animation: leftmove 1s linear forwards;
+}
+@keyframes leftmove {
+    to {
+        transform: translateX(0);
+    }
+}
+.container_left h1 span {
+    color: brown;
+}
+.container_right {
+    flex: 1;
+    background-image: url("./images/hero-desktop.jpg");
+    background-size: cover;
+    background-position: center center;
+}
