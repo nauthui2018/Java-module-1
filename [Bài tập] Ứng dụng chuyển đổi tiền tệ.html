@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>changeCurrency</title>
+</head>
+<style>
+table, th, td {
+  border: 1px solid white;
+  width: 100px;
+  height: 10px;
+}
+</style>
+<body>
+    <form>
+        <table>
+            <tr>
+                <th>Amount</th>
+                <th>From Currency</th>
+                <th>To Currency</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td><input type="text" id="amount"></td>
+            <td>
+                <select id="from">
+                    <option value="vnd">VND</option>
+                    <option value="usd">USD</option>
+                    <option value="cad">CAD</option>
+            </td>
+            <td>
+                <select id="to">
+                    <option value="vnd">VND</option>
+                    <option value="usd">USD</option>
+                    <option value="cad">CAD</option>
+            </td>
+            <td>
+                <button type="button" onclick="convert();">Convert</button>
+            </td>
+            </tr>
+        </table>
+        <p id="result"></p>
+    </form>
+    <script>
+        function toVND(from, to, amount) {
+            
+            if (from == "vnd" && to=="vnd") {
+                let result = amount;
+                document.getElementById("result").innerHTML = "Result: " + result + " VND";
+            }
+            if (from == "usd" && to=="vnd") {
+                let result = amount*23200;
+                document.getElementById("result").innerHTML = "Result: " + result + " VND";
+            }
+            if (from == "cad" && to=="vnd") {
+                let result = amount*17000;
+                document.getElementById("result").innerHTML = "Result: " + result + " VND";
+            }
+        }
+        function toUSD(from, to, amount) {
+            
+            if (from == "vnd" && to=="usd") {
+                let result = amount/23200;
+                document.getElementById("result").innerHTML = "Result: " + result + " USD";
+            }
+            if (from == "usd" && to=="usd") {
+                let result = amount;
+                document.getElementById("result").innerHTML = "Result: " + result + " USD";
+            }
+            if (from == "cad" && to=="usd") {
+                let result = amount*23100/17000;
+                document.getElementById("result").innerHTML = "Result: " + result + " USD";
+            }
+        }
+        function toCAD(from, to, amount) {
+            
+            if (from == "vnd" && to=="cad") {
+                let result = amount/17000;
+                document.getElementById("result").innerHTML = "Result: " + result + " CAD";
+            }
+            if (from == "usd" && to=="cad") {
+                let result = amount*17000/23200;
+                document.getElementById("result").innerHTML = "Result: " + result + " CAD";
+            }
+            if (from == "cad" && to=="cad") {
+                let result = amount;
+                document.getElementById("result").innerHTML = "Result: " + result + " CAD";
+            }
+        }
+        function convert() {
+            let amount = document.getElementById("amount").value;
+            let from = document.getElementById("from").value;
+            let to = document.getElementById("to").value;
+            toVND(from, to, amount);
+            toUSD(from, to, amount);
+            toCAD(from, to, amount);
+        }
+    </script>
+
+</body>
+
+</html>

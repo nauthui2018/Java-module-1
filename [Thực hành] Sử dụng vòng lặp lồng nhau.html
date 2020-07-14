@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Loop in Loop</title>
+</head>
+<style>
+    td {
+        width: 40px;
+        height: 40px;
+        text-align: center;
+    }
+</style>
+<body>
+    <script>
+        let box = "<table border='1' width='400px' height='400px' cellspacing='0' cellpadding='0'>"
+        for (let i = 2; i < 10; i++) {
+            box = box + "<tr>";
+            for (let j = 2; j < 10; j++) {
+                box = box + "<td>" + i*j + "</td>";
+            }
+            box = box + "</tr>";
+        }
+        box = box + "</table>";
+        document.write(box);
+    </script>
+</body>
+
+</html>

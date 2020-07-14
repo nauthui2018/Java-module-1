@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Caculator</title>
+</head>
+    <script>
+        let sum = 0;
+        let max = 0;
+        let maxRow = 0;
+        let sumRow = 0;
+        let sumCol1 = 0;
+        let sumCol2 = 0;
+        let sumCol3 = 0;
+        let sumCol4 = 0;
+        let maxCol = 0;
+        let a1 = 0;
+        let a2 = 0;
+        let a3 = 0;
+        let a4 = 0;
+        for (let i = 0; i < 3; i++) {
+            for (let j = 0; j < 4; j++) {
+                let number = Math.round(Math.random() * 10);
+                document.write(number + " ");
+                sum += number;
+                if (number > max) {
+                    max = number;
+                }
+                sumRow += number;
+                switch (j) {
+                    case 0:
+                        a1 = number;
+                        break;
+                    case 1:
+                        a2 = number;
+                        break;
+                    case 2:
+                        a3 = number;
+                        break;
+                    case 3:
+                        a4 = number;
+                        break;
+                }
+            }
+            document.write("</br>");
+            if (sumRow > maxRow) {
+                maxRow = sumRow;
+            }
+            sumRow = 0;
+            sumCol1 += a1;
+            sumCol2 += a2;
+            sumCol3 += a3;
+            sumCol4 += a4;
+        }
+        maxCol = Math.max(sumCol1, sumCol2, sumCol3, sumCol4);
+        document.write("Sum = " + sum);
+        document.write("</br>");
+        document.write("Max = " + max);
+        document.write("</br>");
+        document.write("MaxRow = " + maxRow);
+        document.write("</br>");
+        document.write("MaxCol = " + maxCol);
+    </script>
+</body>
+
+</html>
