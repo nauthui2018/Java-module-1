@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cost of Bank</title>
+</head>
+<body>
+    <script>
+        let loan = parseInt(prompt("Input your loan"));
+        let month = parseInt(prompt("How many month do you loan?"));
+        let interestRates = 0.01;
+        let totalCost = 0;
+        document.write("Loan: " + loan +"$");
+        document.write("<br>");
+        for (let i = 0; i < month; i++) {
+            totalCost += loan*interestRates;
+            loan += loan*interestRates;
+        }
+        document.write("Interest Rates: " + interestRates*100 + "%");
+        document.write("<br>");
+        document.write("Total cost: " + totalCost + "$");
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create and Show An Array</title>
+</head>
+<body>
+    <h2>Sample Screen:</h2>
+    <div>
+        <input type="text" id="value">
+        <button onclick="Add();">Add</button>
+        <button onclick="Display();">Display</button>
+    </div>
+    <p id="display"></p>
+    <script>
+        let array = new Array();
+        let display = "";
+        let index = 0
+        function Add() {
+            let value = document.getElementById("value").value;
+            array.push(value);
+            display += ("Element " + index + " = " + value + "<br>");
+            index += 1;
+        }
+        function Display(array) {
+            document.getElementById("display").innerHTML = display;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reverse element in Array</title>
+</head>
+<body>
+    <script>
+        //Do not allow to use reverse method
+        let array = [-3,5,1,3,2,10,11];
+        document.write("Array = [" + array + "]");
+        document.write("<br>");
+        let transformer;
+        for (let i = 0; i < array.length/2; i++) {
+            transformer = array[i];
+            array[i] = array[array.length - 1 - i];
+            array[array.length - 1 - i] = transformer;
+        }
+        document.write("Reversed array = [" + array + "]");
+    </script>
+</body>
+
+</html>

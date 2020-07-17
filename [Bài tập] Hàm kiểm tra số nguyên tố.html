@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Is a price number?</title>
+</head>
+<body>
+    <script>
+        function isPrice(number) {
+            let isPriceNumber = true;
+            for (let i = 2; i < number; i++) {
+                if (number%i == 0) {
+                    isPriceNumber = false;
+                    break;
+                }
+            }
+            if (isPriceNumber) {
+                document.write(number + " is a price number");
+            } else {
+                document.write(number + " is NOT a price number");
+            }
+        }
+        let number = parseInt(prompt("Input a number"));
+        while (number < 2) {
+            number = parseInt(prompt("Input another number. It must higher than 2"));
+        }
+        isPrice(number);
+    </script>
+</body>
+
+</html>

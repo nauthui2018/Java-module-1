@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Right Triangle</title>
+</head>
+<style>
+    td {
+        width: 10px;
+        height: 20px;
+        background-color: white;
+        border: none;
+    }
+</style>
+<body>
+    <script>
+        let x = "";
+        let y = "*";
+        let rightAngle = "<table>";
+        //the first triangle
+        for (i = 0; i < 6; i++) {
+            rightAngle += "<tr>";
+            for (j = 0; j < 6; j++) {
+                if (i<j) {
+                    rightAngle += "<td>" + x + "</td>"
+                    
+                } else {
+                    rightAngle += "<td>" + y + "</td>"
+                }
+            }
+            rightAngle += "</tr>";
+        }
+        rightAngle += "</table>";
+        document.write(rightAngle);
+        document.write("<br>");
+        rightAngle = "<table>";
+        //the second right triangle
+        for (i = 0; i < 6; i++) {
+        rightAngle += "<tr>";
+            for (j = 0; j < 6; j++) {
+                if (i > j) {
+                    rightAngle += "<td>" + x + "</td>"
+                    
+                } else {
+                    rightAngle += "<td>" + y + "</td>"
+                }
+            }
+            rightAngle += "</tr>";
+        }
+        rightAngle += "</table>";
+        document.write(rightAngle);
+        document.write("<br>");
+        rightAngle = "<table>";
+
+        //the third right triangle
+        for (i = 0; i < 6; i++) {
+        rightAngle += "<tr>";
+            for (j = 0; j < 6; j++) {
+                if (i + j > 5) {
+                    rightAngle += "<td>" + x + "</td>"
+                    
+                } else {
+                    rightAngle += "<td>" + y + "</td>"
+                }
+            }
+            rightAngle += "</tr>";
+        }
+        rightAngle += "</table>";
+        document.write(rightAngle);
+        document.write("<br>");
+        rightAngle = "<table>";
+
+        //the fourth right triangle
+        for (i = 0; i < 6; i++) {
+        rightAngle += "<tr>";
+            for (j = 0; j < 6; j++) {
+                if (i + j < 5) {
+                    rightAngle += "<td>" + x + "</td>"
+                    
+                } else {
+                    rightAngle += "<td>" + y + "</td>"
+                }
+            }
+            rightAngle += "</tr>";
+        }
+        rightAngle += "</table>";
+        document.write(rightAngle);
+        document.write("<br>");
+        rightAngle = "<table>";
+    </script>
+</body>
+
+</html>

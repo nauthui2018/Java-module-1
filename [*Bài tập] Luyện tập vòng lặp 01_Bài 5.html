@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sum of 20 Fibonacci Numbers</title>
+</head>
+<body>
+    <script>
+        let fibonacci = "20 numbers of Fobanacci: 0, 1";
+        let num = 0;
+        let num1 = 1;
+        let count = 1;
+        let sum = 0;
+        while (count < 19) {
+           num += num1;
+           sum += num;
+           fibonacci += ", " + num;
+           count ++;
+           num1 += num;
+           sum +=num1;
+           fibonacci += ", " + num1;
+           count ++;
+        }
+        document.write(`${fibonacci}`);
+        document.write("<br>");
+        document.write(`Sum of 20 fibonacci numbers: ${sum}`);
+    </script>
+</body>
+
+</html>

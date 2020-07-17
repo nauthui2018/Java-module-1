@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The first fibonacci is divisible to 5</title>
+</head>
+<body>
+    <script>
+        let num = 0;
+        let num1 = 1;
+        let indivisible = true;
+        while (indivisible) {
+            num += num1;
+            if (num%5 == 0) {
+                indivisible = false;
+                document.write(`The first fibonacci is divisible to 5: ${num}`);
+                break;
+            } else {
+                num1 += num;
+                if (num1%5 == 0) {
+                    indivisible = false;
+                    document.write(`The first fibonacci is divisible to 5: ${num1}`);
+                    break;
+                }   
+            }   
+        }
+        
+    </script>
+</body>
+
+</html>

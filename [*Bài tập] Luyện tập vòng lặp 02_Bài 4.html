@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reactangle</title>
+</head>
+<style>
+    td {
+        width: 10px;
+        height: 5px;
+        background-color: white;
+    }
+</style>
+<body>
+    <script>
+        let x = "*";
+        let y = " ";
+        let reactangle = "<table>";
+        let width = parseInt(prompt("Input the width"));
+        let length = parseInt(prompt("Input the length"));
+        for (i = 0; i < width; i++) {
+            if (i == 0) {
+                reactangle += "<tr>";
+                for (let j = 0; j < length; j++) {
+                    reactangle += "<td>" + x + "</td>";
+                }
+                reactangle += "</tr>";
+            } 
+            if (i != 0 && i != width - 1) {
+                reactangle += "<tr>";
+                for (j = 0; j < length; j++) {
+                    if (j == 0 || j == length -1) {
+                        reactangle += "<td>" + x + "</td>";
+                    } else {
+                        reactangle += "<td>" + y + "</td>";
+                    }
+                }
+                reactangle += "</tr>";
+            }
+            if (i == width - 1) {
+                reactangle += "<tr>";
+                for (let j = 0; j < length; j++) {
+                    reactangle += "<td>" + x + "</td>";
+                }
+                reactangle += "</tr>";
+            }  
+        }
+        reactangle += "</table>";
+        document.write(reactangle);
+    </script>
+</body>
+</html>

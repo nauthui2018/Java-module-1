@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Show Temperature</title>
+</head>
+<body>
+    <script>
+        let temperature = parseInt(prompt("Input current temperature!"));
+        while (temperature < 20 || temperature > 100) {
+            if (temperature > 100) {
+            alert("Please reduce temperature");
+            }
+            if (temperature < 20) {
+                alert("Please increase temperature");
+            }
+            temperature = parseInt(prompt("Input adjusted temperature!"))
+        }
+        document.write(`Current temperature is: ${temperature}degrees`);
+    </script>
+</body>
+
+</html>

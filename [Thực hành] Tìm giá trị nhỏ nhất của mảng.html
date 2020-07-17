@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find The Minimum Of An Array</title>
+</head>
+<body>
+    <script>
+        function findMinimumOfArray() {
+            let array = new Array(a);
+            let min = 10;
+            for (let i = 0; i < a; i++) {
+                array[i] = Math.round(Math.random() * 10);
+                if (array[i] < min) {
+                    min = array[i];
+                }
+            }
+            document.write("array = [" + array + "]");
+            document.write("<br>");
+            document.write("min of array: " + min);
+        }
+        let a = 5;
+        findMinimumOfArray(a);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Print out the Heart</title>
+</head>
+<style>
+    td {
+        width: 15px;
+        height: 1vh;
+        background-color: white;
+    }
+</style>
+<body>
+    <script>
+        let x = "*";
+        let y = " ";
+        let heart = "<table>";
+        for (i = 0; i < 8; i++) {
+            if (i == 0) {
+                heart += "<tr>";
+                for (let j = 0; j < 9; j++) {
+                    if (j == 2 || j == 6) {
+                        heart += "<td>" + x + "</td>";
+                    } else {
+                    heart += "<td>" + y + "</td>";
+                    }
+                }
+                heart += "</tr>";
+            } 
+            if (i == 1) {
+                heart += "<tr>";
+                for (let j = 0; j < 9; j++) {
+                    if (j%2 !== 0) {
+                        heart += "<td>" + x + "</td>";
+                    } else {
+                    heart += "<td>" + y + "</td>";
+                    }
+                }
+                heart += "</tr>";
+            } 
+            if (i == 2) {
+                heart += "<tr>";
+                for (let j = 0; j < 9; j++) {
+                    if (j%4 == 0) {
+                        heart += "<td>" + x + "</td>";
+                    } else {
+                    heart += "<td>" + y + "</td>";
+                    }
+                }
+                heart += "</tr>";
+            } 
+            if (i == 3) {
+                heart += "<tr>";
+                for (let j = 0; j < 9; j++) {
+                    if (j%8 == 0) {
+                        heart += "<td>" + x + "</td>";
+                    } else {
+                    heart += "<td>" + y + "</td>";
+                    }
+                }
+                heart += "</tr>";
+            }
+            if (i == 4) {
+                heart += "<tr>";
+                for (let j = 0; j < 9; j++) {
+                    if (j == 1 || j == 7) {
+                        heart += "<td>" + x + "</td>";
+                    } else {
+                    heart += "<td>" + y + "</td>";
+                    }
+                }
+                heart += "</tr>";
+            }
+            if (i == 5) {
+                heart += "<tr>";
+                for (let j = 0; j < 9; j++) {
+                    if (j == 2 || j == 6) {
+                        heart += "<td>" + x + "</td>";
+                    } else {
+                    heart += "<td>" + y + "</td>";
+                    }
+                }
+                heart += "</tr>";
+            }
+            if (i == 6) {
+                heart += "<tr>";
+                for (let j = 0; j < 9; j++) {
+                    if (j == 3 || j == 5) {
+                        heart += "<td>" + x + "</td>";
+                    } else {
+                    heart += "<td>" + y + "</td>";
+                    }
+                }
+                heart += "</tr>";
+            }
+            if (i == 7) {
+                heart += "<tr>";
+                for (let j = 0; j < 9; j++) {
+                    if (j == 4) {
+                        heart += "<td>" + x + "</td>";
+                    } else {
+                    heart += "<td>" + y + "</td>";
+                    }
+                }
+                heart += "</tr>";
+            }
+        }
+        heart += "</table>";
+        document.write(heart);
+    </script>
+</body>
+</html>

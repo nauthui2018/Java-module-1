@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>20 Fibonacci Numbers</title>
+</head>
+<body>
+    <script>
+        let fibonacci = "20 numbers of Fibonacci: 0, 1";
+        let num = 0;
+        let num1 = 1;
+        let count = 1;
+        while (count < 19) {
+           num += num1;
+           fibonacci += ", " + num;
+           count ++;
+           num1 += num;
+           fibonacci += ", " + num1;
+           count ++;
+        }
+        document.write(`${fibonacci}`);
+    </script>
+</body>
+
+</html>

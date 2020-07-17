@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find The Maximum Of An Array</title>
+</head>
+<body>
+    <script>
+        function findMaximumOfArray() {
+            let array = new Array(a);
+            let max = 0;
+            for (let i = 0; i < a; i++) {
+                array[i] = Math.round(Math.random() * 10);
+                if (array[i] > max) {
+                    max = array[i];
+                }
+            }
+            document.write("array = [" + array + "]");
+            document.write("<br>");
+            document.write("min of array: " + max);
+        }
+        let a = 5;
+        findMaximumOfArray(a);
+    </script>
+</body>
+
+</html>

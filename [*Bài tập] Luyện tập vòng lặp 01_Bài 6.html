@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sum of 30 numbers are divisible to 7</title>
+</head>
+<body>
+    <script>
+        let count = 1;
+        let sum = 0;
+        for (let i = 0; i < 1000; i++) {
+            if (i%7 == 0) {
+                document.write(i + ",");
+                sum += i;
+                count += 1;
+                if (count > 30) {
+                    break;
+                }
+            }  
+        }
+        document.write("<br>");
+        document.write(`Sum of 30 numbers are divisible to 7: ${sum}`);
+    </script>
+</body>
+
+</html>

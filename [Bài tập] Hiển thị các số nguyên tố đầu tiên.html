@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Show 20 Prime Numbers</title>
+</head>
+<body>
+    <script>
+        let number = 2;
+        let count = 0;
+        let numIsPriceNumber = true;
+        while (count <= 20) {
+            for (let i = 2; i < number; i++) {
+                if (number%i === 0) {
+                    numIsPriceNumber = false;
+                    break;
+                }
+            }
+            if (numIsPriceNumber) {
+                count ++;
+                document.write("So nguyen to thu " + count + ": " + number);
+                document.write("</br>");
+                number ++;
+            } else {
+                number ++;
+                numIsPriceNumber = true;
+            }
+        }
+    </script>
+</body>
+
+</html>
