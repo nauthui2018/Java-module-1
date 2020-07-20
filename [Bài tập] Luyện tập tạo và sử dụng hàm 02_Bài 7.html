@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function 2</title>
+</head>
+<body>
+   
+    <script>
+        let number1 = +prompt("Input the first number");
+        let number2 = +prompt("Input the second number");
+        function SwapNumber() {
+            let number = number1;
+            number1 = number2;
+            number2 = number;
+        }
+        document.write("Before swap: " + number1 + " " + number2);
+        document.write("<br>");
+        SwapNumber();
+        document.write("After swap: " + number1 + " " + number2);
+    </script>
+</body>
+
+</html>

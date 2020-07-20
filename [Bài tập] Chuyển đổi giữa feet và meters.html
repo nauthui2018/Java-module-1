@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Convert between feet and meter</title>
+</head>
+<body>
+    <h2>Feet & Meter</h2>
+    <input type="text" id="input"> 
+    <select id="from">
+        <option value="Feet">Feet</option>
+        <option value="Meter">Meter</option>
+    </select>
+    <button onclick="Convert();">Convert</button>
+    <h3 id="output"></h3>
+    <script>
+        function Convert() {
+            let from = document.getElementById("from").value;
+            if (from === "Feet") {
+                ToMeter();
+            } else {
+                ToFeet();
+            }
+            
+        }
+       function ToMeter() {
+           let feet = parseFloat(document.getElementById("input").value);
+           document.getElementById("output").innerHTML = feet*3.279 + " Meter";
+       }
+       function ToFeet() {
+           let meter = parseFloat(document.getElementById("input").value);
+           document.getElementById("output").innerHTML = meter*0.305 + " Feet";
+       }
+
+    </script>
+</body>
+
+</html>

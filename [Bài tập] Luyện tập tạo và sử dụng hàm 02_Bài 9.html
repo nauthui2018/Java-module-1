@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function 2</title>
+</head>
+<body>
+   
+    <script>
+        let array = [];
+        function CheckingArray() {
+            let arrayLength = +prompt("Input array's length");
+            for (let i = 0; i < arrayLength; i++) {
+                array.push(+prompt("Input anything"));
+            }
+            let n = +prompt("Input anything");
+            document.write("Number need to check: " + n);
+            document.write("<br>");
+            let cnt = 0;
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] === n) {
+                    cnt++;
+                }
+            }
+            if (cnt > 0) {
+                return cnt;
+            } else {
+                return -1;
+            }
+        }
+        document.write("Return value: " + CheckingArray());
+        document.write("<br>");
+        document.write("Array: [" + array + "]");
+    </script>
+</body>
+
+</html>

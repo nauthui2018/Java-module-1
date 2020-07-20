@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function 2</title>
+</head>
+<body>
+   
+    <script>
+        let array = [];
+        function ReverseArray() {
+            let arrayLength = +prompt("Input array's length");
+            for (let i = 0; i < arrayLength; i++) {
+                array.push(+prompt("Input a integer"));
+            }
+            document.write("Array before reverse: [" + array + "]");
+            document.write("<br>");
+            array.reverse();
+            document.write("Array after reverse: [" + array + "]");
+        }
+        ReverseArray();
+    </script>
+</body>
+
+</html>

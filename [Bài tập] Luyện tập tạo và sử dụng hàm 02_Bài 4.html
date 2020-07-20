@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function 2</title>
+</head>
+<body>
+    <script>
+        let input = +prompt("Input a character");
+        function Checking() {
+            for (let i = 0; i < 10; i++) {
+                if (input === i) {
+                    return true;
+                    break;
+                }
+            }
+            return false;
+        }
+        
+        if (Checking()) {
+            document.write("It is a number");
+        } else {
+            document.write("It isn't a number");
+        }
+    </script>
+</body>
+
+</html>

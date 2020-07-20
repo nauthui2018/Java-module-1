@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>isParindrome</title>
+</head>
+<body>
+   
+    <script>
+        let string = prompt("Input a string");
+        let length = string.length;
+        function isParindrome() {
+            let parindrome = true;
+            for (let i = 0; i < string.length/2; i++) {
+                if (string.charAt(i) != string.charAt(length-1-i)) {
+                    parindrome = false;
+                    break;
+                } 
+            }
+            return parindrome;
+        }
+        document.write(isParindrome());
+    </script>
+</body>
+
+</html>

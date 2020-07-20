@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function 2</title>
+</head>
+<body>
+   
+    <script>
+       function MinNumber() {
+           let number;
+           let cnt = 0;
+           let array = [];
+            while (cnt < 3) {
+                number = +prompt("Input number");
+                array.push(number);
+                cnt ++;   
+            }
+            let min = array[0];
+            for (let i = 0; i < array.length; i++) {
+                if (min > array[i]) {
+                    min = array[i];
+                }
+            }
+           document.write("Array = [" + array + "]");
+           document.write("<br>");
+           document.write("Min: " + min);
+       }
+       MinNumber();
+    </script>
+</body>
+
+</html>
